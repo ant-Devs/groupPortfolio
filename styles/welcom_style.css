@@ -1,62 +1,8 @@
-* {
-	margin: 0;
-	padding: 0;
-
-	font-family: "Montserrat", sans-serif;
-	line-height: 1.5;
-}
-
-body {
-	font-size: 1.1rem;
-	color: #464646;
-}
-
-svg {
-	height: max-content;
-	width: 100%;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-weight: 500;
-	margin-bottom: 1.5em;
-}
-
-header {
-	position: relative;
-	padding: 1rem 0;
-	width: max-content;
-}
-header::before {
-	display: block;
-	position: absolute;
-
-	content: "";
-	height: 0.6rem;
-	width: 45%;
-	top: 0;
-	background-color: #848484;
-	border-radius: 1.3rem;
-}
-header h1 {
-	font-size: 1.77rem;
-}
-
-.container {
-	width: 60%;
-	margin-inline: auto;
-	max-width: 90rem;
-
-	padding-top: 5%;
-}
-
 .main-welcome {
 	margin-block: 3rem;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .main-welcome > * {
@@ -65,7 +11,6 @@ header h1 {
 
 .main-welcome .logo {
 	flex-basis: 35%;
-	margin-top: 1.5rem;
 }
 
 .main-welcome .text {
