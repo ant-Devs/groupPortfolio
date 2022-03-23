@@ -1,0 +1,38 @@
+.member {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	height: 80vh;
+}
+
+.member-profile {
+	flex-basis: 33%;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	overflow: hidden;
+	border: 1px solid rgb(112, 69, 65);
+
+	height: 27rem;
+}
+
+.member-profile img {
+	object-fit: cover;
+}
+.member-name {
+	font-size: 1.2rem;
+	text-align: center;
+	padding: 1em 0;
+	background-color: rgba(242, 242, 242, 0.674);
+}
+
+.member-description {
+	flex-basis: 60%;
+
+	padding-block: 2rem;
+}
+
+.member-description p {
+	margin: 1rem 0 2rem;
+}
