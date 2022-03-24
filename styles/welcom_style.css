@@ -1,19 +1,24 @@
 .main-welcome {
 	margin-block: 3rem;
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap-reverse;
+
+	/* justify-content: space-between; */
 	align-items: center;
 }
 
-.main-welcome > * {
-	flex-basis: 55%;
-}
-
 .main-welcome .logo {
-	flex-basis: 35%;
+	flex: 1 1 35%;
+	/* max-height: 9rem; */
+}
+.icon-logo {
+	max-height: 20rem;
 }
 
 .main-welcome .text {
+	flex: 1 1 55%;
+	min-width: 19rem;
+
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;

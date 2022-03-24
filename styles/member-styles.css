@@ -1,5 +1,14 @@
+.container {
+	display: flex;
+	justify-content: center;
+
+	max-width: 65rem;
+}
+
 .member {
 	display: flex;
+	flex-wrap: wrap;
+	gap: 4rem;
 	justify-content: space-between;
 	align-items: center;
 
@@ -7,7 +16,9 @@
 }
 
 .member-profile {
-	flex-basis: 33%;
+	flex: 1 1 20rem;
+	max-width: 30rem;
+	/* min-width: 18rem; */
 	display: flex;
 	flex-direction: column;
 	justify-content: end;
@@ -24,13 +35,23 @@
 	font-size: 1.2rem;
 	text-align: center;
 	padding: 1em 0;
-	background-color: rgba(242, 242, 242, 0.674);
+	background-color: #f2f2f2ac;
 }
 
 .member-description {
-	flex-basis: 60%;
+	flex: 1 1 30rem;
 
 	padding-block: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+	.member {
+		gap: 0rem;
+		width: max-content;
+	}
+	.member-description {
+		max-width: 32rem;
+	}
 }
 
 .member-description p {
