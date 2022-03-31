@@ -3,6 +3,11 @@
 	--ant2: #2e1c12e3;
 }
 
+.wrapper {
+	background: url(../assets/subtle-prism.svg),
+		linear-gradient(135deg, #4e4e4ea9, #eeeeeedc);
+	background-blend-mode: overlay;
+}
 .section {
 	min-height: 25rem;
 	padding: 0 5%;
@@ -67,9 +72,6 @@
 		padding: 0;
 		padding-block: 5rem;
 		background-color: #f3f3f3c2;
-	}
-	.wrapper {
-		/* background-image: url(../assets/Sprinkle.svg); */
 	}
 	.container {
 		width: 90%;
