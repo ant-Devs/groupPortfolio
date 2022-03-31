@@ -78,8 +78,8 @@
 
 	/* Landing */
 	.section-landing {
-		background: url(../assets/lighthouse-g0de33880f_1920.jpg),
-			linear-gradient(95deg, #441100db, #24222366);
+		background: url(../assets/worlMap.jpg),
+			linear-gradient(95deg, #002f44db, #24222366);
 		background-size: cover;
 		background-blend-mode: multiply;
 		background-position: 0 10%;
