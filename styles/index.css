@@ -1,111 +1,197 @@
 .section {
-  min-height: 25rem;
-  padding: 0 5%;
+	min-height: 25rem;
+	padding: 0 5%;
 }
 
 .container {
-  padding-block: 5rem;
+	padding-block: 5rem;
 }
 
-/* header */
-.container.container_landing {
-  min-height: inherit;
-  position: relative;
-
-  display: flex;
-  align-items: center;
-}
-.container_landing header {
-  position: absolute;
+/* landing */
+@keyframes shiftBackground {
+	0% {
+		background-position: 0 1%;
+	}
+	100% {
+		background-position: 0 90%;
+	}
 }
 
 /* Welcome section */
 .container_welcome {
-  padding-block: 5rem;
+	padding-block: 5rem;
 }
 .article-welcome {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
 }
 .article-welcome .text {
-  flex-basis: 80%;
+	flex-basis: 80%;
 }
 
 .logo {
-  width: 60%;
-  flex-basis: 50%;
-  max-width: 35rem;
+	width: 60%;
+	flex-basis: 50%;
+	max-width: 35rem;
 }
 
 /* TEAM section */
 .team-members {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: space-between; */
+	gap: 2rem;
 }
 
 /* MEMBER SECTION  */
 .member-profile img {
-  border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
-  box-shadow: 0 0 3px #555;
+	/* border-radius: 50%; */
+	/* width: 10rem;
+	height: 10rem; */
+	box-shadow: 0 0 3px #555;
+
+	position: relative;
 }
 
 /* DESKTOP VIEW  */
 
 @media screen and (min-width: 760px) {
-  .section {
-    padding: 0;
-  }
-  .container {
-    width: 90%;
-    max-width: 60rem;
-    margin-inline: auto;
-  }
+	* {
+		--ant: #5b3e30;
+		--ant2: #2e1c12e3;
+	}
+	.section {
+		padding: 0;
+		padding-block: 5rem;
+		background-color: #f3f3f3c2;
+	}
+	.wrapper {
+		/* background-image: url(../assets/Sprinkle.svg); */
+	}
+	.container {
+		width: 90%;
+		max-width: 60rem;
+		margin-inline: auto;
+	}
 
-  /* welcome sectoin */
-  .article-welcome {
-    flex-direction: row;
-  }
+	/* Landing */
+	.section-landing {
+		background: url(../assets/lighthouse-g0de33880f_1920.jpg),
+			linear-gradient(95deg, #441100db, #24222366);
+		background-size: cover;
+		background-blend-mode: multiply;
+		background-position: 0 10%;
+		height: 68vh;
+		max-height: 70rem;
+		/* animation: shiftBackground 80s ease 0s 1 forwards; */
+	}
+	.container.container_landing {
+		min-height: inherit;
+		height: 80%;
+		/* position: absolute; */
+		color: #fff;
 
-  /* TEAM section */
-  .team-members {
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    gap: 0;
-  }
+		display: flex;
+		align-items: center;
+	}
+	.container_landing header h1 {
+		font-weight: 600;
+		font-size: 6rem;
+	}
 
-  .team-member {
-    min-height: 23rem;
-    flex-basis: 100%;
+	/* welcome sectoin */
+	.section-welcome {
+		/* padding-block: 6rem; */
+	}
+	.container_welcome header::before {
+		background-color: var(--ant);
+	}
+	.article-welcome {
+		flex-direction: row;
+	}
+	.article-welcome .text div {
+		color: var(--ant);
+	}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+	/* TEAM section */
+	.team-members {
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		gap: 0;
+	}
 
-    box-shadow: 0 0 1px #444;
-  }
-  .member-name {
-    margin: 0;
-    padding-block: 1em;
-    text-align: center;
+	.team-member {
+		min-height: 23rem;
+		flex-basis: 100%;
 
-    background-color: #f8f8f8;
-  }
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
 
-  /* members */
-  .member {
-    display: flex;
-  }
+		box-shadow: 0 0 1px #444;
+		overflow: hidden;
 
-  .member-profile {
-    flex-basis: 40%;
-  }
-  .member-description {
-    flex-basis: 55%;
-  }
+		position: relative;
+	}
+	.team-member-picture {
+		object-fit: cover;
+		min-height: inherit;
+	}
+	.member-name {
+		margin: 0;
+		display: block;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		padding-block: 1em;
+		text-align: center;
+
+		background-color: #eeeeeedc;
+		position: absolute;
+		z-index: 39;
+
+		font-weight: 600;
+	}
+
+	/* members */
+	.member {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.member-profile {
+		flex-basis: 34%;
+
+		display: flex;
+		flex-direction: column;
+
+		position: relative;
+		overflow: hidden;
+
+		border-radius: 3px;
+		box-shadow: 0 0 4px -1px #555;
+	}
+	.member-picture {
+		min-height: inherit;
+		object-fit: cover;
+	}
+	.member-description {
+		flex-basis: 55%;
+	}
+	.profile-name {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding-block: 1rem;
+		text-align: center;
+		background-color: var(--ant2);
+		color: #eeeeee;
+
+		width: 100%;
+		font-weight: 500;
+	}
 }
