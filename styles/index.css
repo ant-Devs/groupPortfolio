@@ -104,10 +104,10 @@
 		font-size: 6rem;
 	}
 
-	/* welcome sectoin */
+	/* welcome sectoin
 	.section-welcome {
-		/* padding-block: 6rem; */
-	}
+		padding-block: 6rem;
+	} */
 	.container_welcome header::before {
 		background-color: var(--ant);
 	}
@@ -164,7 +164,14 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		flex-direction: row-reverse;
 	}
+	div:nth-of-type(odd).container_member .member {
+		flex-direction: row;
+	}
+	/* .member:nth-of-type(odd) {
+		flex-direction: row-reverse;
+	} */
 
 	.member-profile {
 		flex-basis: 34%;
